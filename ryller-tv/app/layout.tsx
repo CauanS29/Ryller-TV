@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SearchBar from "./components/searchBar/SearchBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+       <div className="relative bg-black">
+        <div className="absolute top-0 left-0 w-full h-full">
+            <img
+              src='/img/background.png'
+              alt='backgroundImage'
+              className="h-screen w-full object-cover"
+            />
+        </div>
+        <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black/10 to-black"/>
+        <div className="relative">
+          <SearchBar/>
+          {children}
+        </div>
+       
+       </div>
+      </body>
     </html>
   );
 }
