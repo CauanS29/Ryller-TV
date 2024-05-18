@@ -8,9 +8,9 @@ interface InputProps {
 export default function Input({ id, label, placeHolder, type = "text" }: InputProps) {
     return (
         <div>
-            l<label htmlFor={id}>
+            <label htmlFor={id}>
                 {label}
-            </label>/
+            </label>
             <input
                 type={type}
                 placeholder={placeHolder}

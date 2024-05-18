@@ -1,6 +1,6 @@
 
-import HomeLayout from "./layouts/HomeLayout";
-import HomePage from "./pages/home/HomePage";
+import HomeLayout from "./home/HomeLayout";
+import HomePage from "./home/HomePage";
 
 
 
