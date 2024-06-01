@@ -23,6 +23,8 @@ const Form: React.FC<FormProps> = ({ onSubmit }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<InputErrors>({});
 
+ 
+
   
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -51,6 +53,7 @@ const Form: React.FC<FormProps> = ({ onSubmit }) => {
         <Input id="password" placeHolder="Digite sua senha" onChange={e => setPassword(e.target.value)} value={password} label="Senha" />
         {error.password && <p>{error.password}</p>}
         <Button type="submit"><p>Entrar</p></Button>
+       
       </form>
     </div>
   );
