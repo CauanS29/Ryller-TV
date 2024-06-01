@@ -6,20 +6,18 @@ const redirectTo = (url: string) => {
 };
 
 import Form from '../shared/components/Form/Form';
-const baseUrl='http://localhost:8080'
+
 const TelaLogin: React.FC = () => {
   
   const handleSubmit = async ({ email, password }: { email: string; password: string }) => {
-    console.log('Email:', email);
-    console.log('Password:', password);
     try {
-      LoginService.Login({email,password})
+      console.log('Email:', email);
+      console.log('Password:', password);
+      await LoginService.Login({email,password})
+      redirectTo('/');
     } catch (error) {
       console.error(error)
     }
-    
-    
-    redirectTo('/Login');
   };
 
   return (
