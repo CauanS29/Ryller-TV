@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 export default function NavBar() {
     return (
         <header>
-            <div className="flex justify-center items-center w-full p-3 bg-gray-900">
+            <div className="flex justify-center items-center w-full p-3 bg-mainGray">
                 <div className="w-1/6 flex justify-center items-center">
                     <a href={"/"} className="flex justify-center items-center">
                         <img src="/img/logo.png" alt="logo" className="w-10 object-cover rounded-full" />
