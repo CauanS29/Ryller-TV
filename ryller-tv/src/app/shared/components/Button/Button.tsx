@@ -1,17 +1,20 @@
 'use client';
 import Link from 'next/link';
+import { SubmitHandler } from 'react-hook-form';
 
 interface ButtonProps {
   href?: string;
   children: React.ReactNode;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, children, disabled, type = 'button' }) => {
+const Button: React.FC<ButtonProps> = ({ href, children, disabled, onClick, type = 'button' }) => {
   return href ? (
     <Link href={href} passHref>
       <button 
+        onClick={onClick}
         disabled={disabled}
         className="bg-black
             bg-transparent p-2 outline-none border-neutral-100/60 border-[1px]
@@ -21,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({ href, children, disabled, type = 'butto
     </Link>
   ) : (
     <button 
+    onClick={onClick}
       type={type}
       disabled={disabled}
       className="w-full bg-gradient-to-r from-neutral-100/60 to-black/25

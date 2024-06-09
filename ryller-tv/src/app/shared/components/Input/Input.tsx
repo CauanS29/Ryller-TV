@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface InputProps {
-    id: string;
-    label: string;
-    placeHolder: string;
+    id?: string;
+    label?: string;
+    placeHolder?: string;
     type?: string;
     className?: string;
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
-    value: string;
+    value?: string;
 }
 
 
@@ -18,7 +18,6 @@ const Input: React.FC<InputProps> = ({ id, label, placeHolder, type  , className
                 {label}
             </label>
             <input 
-            
                 type={type}
                 placeholder={placeHolder}
                 id={id}
