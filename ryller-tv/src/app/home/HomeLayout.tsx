@@ -1,7 +1,6 @@
 import { LayoutProps } from "../../types/types";
-import Footer from "../shared/components/Footer/Footer";
-import NavBar from "../shared/components/NavBar/NavBar";
-
+import Footer from "@/components/ui/footer";
+import NavBar from "@/components/ui/navBar";
 
 const HomeLayout = ({ children }: LayoutProps) => {
   return (

@@ -1,6 +1,6 @@
 import { LayoutProps } from "../../types/types";
-import NavBar from "../shared/components/NavBar/NavBar";
-import Footer from "../shared/components/Footer/Footer";
+import NavBar from "@/components/ui/navBar";
+import Footer from "@/components/ui/footer";
 
 const LoginLayout = ({ children }: LayoutProps) => {
   return (
